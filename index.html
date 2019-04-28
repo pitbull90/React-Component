@@ -15,117 +15,34 @@
   <!-- BABEL LIBRARY -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
 
-  <title>Styling Statless Functional Components</title>
+  <title>Friendly</title>
 </head>
 <body>
 
   <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT  -->
-  <div id="app">Your React Code did not render</div>
+  <div id="app">Your React Code did not render yet</div>
 
   <!-- JAVASCRIPT -->
   <script type="text/babel">
 
-  let ColorSpectrum = () => {
-      return(
-          <div>
-            <Red/>
-            <Orange/>
-            <Yellow/>
-            <Green/>
-            <Blue/>
-            <Indigo/>
-            <Violet/>
-          </div>
-      );
-  }
+  // Friendly Complex Component
 
-let Red = () => {
-    let redStyle = {
-        height: 50,
-        width: 150,
-        backgroundColor: "red"
-    }
-  return(
-    <h1 style={redStyle}>Red</h1>
-  );
-}
+  // Avatar Component
 
-let Orange = () => {
+  // UserName Component
 
-    let orangeStyle = {
-        height: 50,
-        width: 150,
-        backgroundColor: "orange"
-    }
-  return(
-    <h1 style={orangeStyle}>Orange</h1>
-  );
-}
+  // GetConnected Complex Component
 
-let Green = () => {
+    // Like Component
 
-let greenStyle = {
-    height: 50,
-    width: 150,
-    backgroundColor: "green"
-}
-return(
-<h1 style={greenStyle}>Orange</h1>
-);
-}
+    // Share Component
 
-let Yellow = () => {
+    // Add Component
 
-let yellowStyle = {
-    height: 50,
-    width: 150,
-    backgroundColor: "yellow"
-}
-return(
-<h1 style={yellowStyle}>Orange</h1>
-);
-}
-
-let Blue = () => {
-
-let blueStyle = {
-    height: 50,
-    width: 150,
-    backgroundColor: "blue"
-}
-return(
-<h1 style={blueStyle}>Orange</h1>
-);
-}
-
-let Indigo = () => {
-
-let indigoStyle = {
-    height: 50,
-    width: 150,
-    backgroundColor: "indigo"
-}
-return(
-<h1 style={indigoStyle}>Orange</h1>
-);
-}
-
-let Violet = () => {
-
-let violetStyle = {
-    height: 50,
-    width: 150,
-    backgroundColor: "violet"
-}
-return(
-<h1 style={violetStyle}>Orange</h1>
-);
-}
-
-ReactDOM.render(
-    <ColorSpectrum/>,
+  ReactDOM.render(
+    <Friendly/>,
     document.getElementById("app")
-)
+  );
     
   </script>
 <!-- one change -->

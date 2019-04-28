@@ -26,18 +26,63 @@
   <script type="text/babel">
 
   // Friendly Complex Component
+  function Friendly() {
+    return(
+      <div>
+        <Avatar/>
+        <UserName/>
+        <GetConnected/>
+      </div>
+    );
+  }
 
   // Avatar Component
+  function Avatar() {
+    return(
+      <img src="https://media.licdn.com/dms/image/C5603AQG9cIvauPOrJw/profile-displayphoto-shrink_200_200/0?e=1562198400&v=beta&t=QMvnAL9knDS3ncxJ9Yuh__iEofxQa8Z8Dn-OGwetCLI" alt="Profile Picture"></img>
+    );
+  }
 
   // UserName Component
+  function UserName() {
+    return(
+      <h1>Profile Name</h1>
+    );
+  }
 
   // GetConnected Complex Component
+  function GetConnected() {
+    return(
+      <div>
+        <Like/>
+        <Share/>
+        <Add/>
+      </div>
+    );
+  }
 
-    // Like Component
+  // Like Component
+  function Like() {
+    return(
+      <div></div>
+    );
+  }
 
-    // Share Component
+  // Share Component
+  function Share() {
+    return(
+      <div></div>
+    );
+  }
 
-    // Add Component
+  // Add Component
+  function Add() {
+    return(
+      <div></div>
+    );
+  }
+
+  
 
   ReactDOM.render(
     <Friendly/>,

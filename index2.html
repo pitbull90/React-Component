@@ -31,8 +31,10 @@
   <script type="text/babel">
 
   // Friendly Complex Component
-  function Friendly() {
+  function Friendly(props) {
     let friendlyStyle = {
+      display: "inline-block",
+      margin: 20,
       height: 300,
       width: 200,
       padding: 0,
@@ -42,43 +44,47 @@
     }
     return(
       <div style={friendlyStyle}>
-        <Avatar/>
-        <UserName/>
+        <Avatar img={props.img}/>
+        <UserName name={props.name}/>
         <GetConnected/>
       </div>
     );
   }
 
   // Avatar Component
-  function Avatar() {
+  function Avatar(props) {
     let avatarStyle = {
-      marginLeft: 25,
+      marginLeft: 27,
       marginTop: 20,
       width: 150,
       height: 150,
       borderRadius: "50%"
     }
     return(
-      <img src="https://media.licdn.com/dms/image/C5603AQG9cIvauPOrJw/profile-displayphoto-shrink_200_200/0?e=1562198400&v=beta&t=QMvnAL9knDS3ncxJ9Yuh__iEofxQa8Z8Dn-OGwetCLI" alt="Profile Picture" style={avatarStyle}/>
+      <img src={props.img} alt="Profile Picture" style={avatarStyle}/>
     );
   }
 
   // UserName Component
-  function UserName() {
+  function UserName(props) {
     let nameStyle = {
       fontSize: 24,
       fontFamily: "Arial, Helvetica, sans-serif",
-      margin: 20
+      margin: 20,
+      textAlign: "center"
     }
     return(
-      <h1 style={nameStyle}>Profile Name</h1>
+      <h1 style={nameStyle}>{props.name}</h1>
     );
   }
 
   // GetConnected Complex Component
   function GetConnected() {
+    let getConnectedStyle = {
+        marginLeft: 15
+    }
     return(
-      <div>
+      <div style={getConnectedStyle}>
         <Like/>
         <Share/>
         <Add/>
@@ -111,10 +117,17 @@
       );
     }
 
-  
+// Mass produce individual friendly cards using props
 
   ReactDOM.render(
-    <Friendly/>,
+    <div>
+      <Friendly name="Henry" img="https://media.licdn.com/dms/image/C5603AQG9cIvauPOrJw/profile-displayphoto-shrink_200_200/0?e=1562198400&v=beta&t=QMvnAL9knDS3ncxJ9Yuh__iEofxQa8Z8Dn-OGwetCLI"/>
+      <Friendly name="Vincent" img="https://media.licdn.com/dms/image/C5603AQEgPt2pwhSIQQ/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=ZltOIXCYWR4uro0eIHxQXdYU2kPA0TxQKLp5nT7ByP0"/>
+      <Friendly name="Marina" img="https://media.licdn.com/dms/image/C4E03AQFcxw3nsBL1pg/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=TaQVmQBtFwp0UIGMHMJZdFiVCUNopH6gnHl6e7ESUdA"/>
+      <Friendly name="Leila" img="https://media.licdn.com/dms/image/C5103AQF_JiirvOD4Cg/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=cxjV4s_vgrTNcUPMrbM_nG_67WhVu0wg3ewPmhvj0mM"/>
+      <Friendly name="Alexa" img="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"/>
+    </div>
+    ,
     document.getElementById("app")
   );
     

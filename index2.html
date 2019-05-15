@@ -30,9 +30,13 @@
   <!-- JAVASCRIPT -->
   <script type="text/babel">
 
-  // Friendly Complex Component
-  function Friendly(props) {
-    let friendlyStyle = {
+ function Friendly(props) {
+   var people = props.people;
+  //  iterate through array
+  // assign transformed array to new variable
+   var peopleItem = people.map(function(person) {
+    //  assign styling to Friendly Component
+    var friendlyStyle = {
       display: "inline-block",
       margin: 20,
       height: 300,
@@ -41,15 +45,18 @@
       background: "#fff",
       WebKitFilter: "drop-shadow(0px 0px 5px #555)",
       filter: "drop-shadow(0px 0px 5px #555)"
-    }
-    return(
-      <div style={friendlyStyle}>
-        <Avatar img={props.img}/>
-        <UserName name={props.name}/>
-        <GetConnected/>
-      </div>
-    );
-  }
+    };
+     return <div style={friendlyStyle}>
+              <Avatar img={person.img}/>
+              <UserName name={person.name}/>
+              <GetConnected/>
+            </div>
+   });
+   return(
+     <div>{peopleItem}</div>
+   );
+ }
+  
 
   // Avatar Component
   function Avatar(props) {
@@ -117,15 +124,19 @@
       );
     }
 
-// Mass produce individual friendly cards using props
+  var people = [
+    {name: "Henry", img: "https://media.licdn.com/dms/image/C5603AQG9cIvauPOrJw/profile-displayphoto-shrink_200_200/0?e=1562198400&v=beta&t=QMvnAL9knDS3ncxJ9Yuh__iEofxQa8Z8Dn-OGwetCLI"}, 
+    {name: "Vincent", img: "https://media.licdn.com/dms/image/C5603AQEgPt2pwhSIQQ/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=ZltOIXCYWR4uro0eIHxQXdYU2kPA0TxQKLp5nT7ByP0"}, 
+    {name: "Marina", img: "https://media.licdn.com/dms/image/C4E03AQFcxw3nsBL1pg/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=TaQVmQBtFwp0UIGMHMJZdFiVCUNopH6gnHl6e7ESUdA"}, 
+    {name: "Leila", img: "https://media.licdn.com/dms/image/C5103AQF_JiirvOD4Cg/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=cxjV4s_vgrTNcUPMrbM_nG_67WhVu0wg3ewPmhvj0mM"}, 
+    {name: "Alexa", img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
+    ];
 
   ReactDOM.render(
     <div>
-      <Friendly name="Henry" img="https://media.licdn.com/dms/image/C5603AQG9cIvauPOrJw/profile-displayphoto-shrink_200_200/0?e=1562198400&v=beta&t=QMvnAL9knDS3ncxJ9Yuh__iEofxQa8Z8Dn-OGwetCLI"/>
-      <Friendly name="Vincent" img="https://media.licdn.com/dms/image/C5603AQEgPt2pwhSIQQ/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=ZltOIXCYWR4uro0eIHxQXdYU2kPA0TxQKLp5nT7ByP0"/>
-      <Friendly name="Marina" img="https://media.licdn.com/dms/image/C4E03AQFcxw3nsBL1pg/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=TaQVmQBtFwp0UIGMHMJZdFiVCUNopH6gnHl6e7ESUdA"/>
-      <Friendly name="Leila" img="https://media.licdn.com/dms/image/C5103AQF_JiirvOD4Cg/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=cxjV4s_vgrTNcUPMrbM_nG_67WhVu0wg3ewPmhvj0mM"/>
-      <Friendly name="Alexa" img="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"/>
+      <Friendly 
+        people={people}
+      />
     </div>
     ,
     document.getElementById("app")

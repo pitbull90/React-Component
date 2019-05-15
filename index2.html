@@ -6,14 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- REACT LIBRARY -->
-  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+<!-- REACT LIBRARY -->
+<script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
 
-  <!-- REACT DOM LIBRARY -->
-  <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
-  
-  <!-- BABEL LIBRARY -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+<!-- REACT DOM LIBRARY -->
+<script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+
+<!-- BABEL LIBRARY -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+
+<!-- Bootstrap -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -22,6 +27,12 @@
 
   <title>Friendly</title>
 </head>
+
+<style>
+.friendly {-webkit-transition: all .3s ease; transition: all .3s ease;}
+.friendly:hover {transform: translateY(-10px); cursor: pointer;}
+</style>
+
 <body>
 
   <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT  -->
@@ -46,7 +57,7 @@
       WebKitFilter: "drop-shadow(0px 0px 5px #555)",
       filter: "drop-shadow(0px 0px 5px #555)"
     };
-     return <div style={friendlyStyle}>
+     return <div className="friendly" style={friendlyStyle}>
               <Avatar img={person.img}/>
               <UserName name={person.name}/>
               <GetConnected/>
@@ -126,7 +137,7 @@
 
   var people = [
     {name: "Henry", img: "https://media.licdn.com/dms/image/C5603AQG9cIvauPOrJw/profile-displayphoto-shrink_200_200/0?e=1562198400&v=beta&t=QMvnAL9knDS3ncxJ9Yuh__iEofxQa8Z8Dn-OGwetCLI"}, 
-    {name: "Vincent", img: "https://media.licdn.com/dms/image/C5603AQEgPt2pwhSIQQ/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=ZltOIXCYWR4uro0eIHxQXdYU2kPA0TxQKLp5nT7ByP0"}, 
+    {name: "Vincent", img: "https://media.licdn.com/dms/image/C5603AQHg3ZYApgkEUQ/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=2XSpfxnnQRyt1vg9oQzjqOYhnkS7Agf8U6IOXhrbUHY"}, 
     {name: "Marina", img: "https://media.licdn.com/dms/image/C4E03AQFcxw3nsBL1pg/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=TaQVmQBtFwp0UIGMHMJZdFiVCUNopH6gnHl6e7ESUdA"}, 
     {name: "Leila", img: "https://media.licdn.com/dms/image/C5103AQF_JiirvOD4Cg/profile-displayphoto-shrink_800_800/0?e=1563408000&v=beta&t=cxjV4s_vgrTNcUPMrbM_nG_67WhVu0wg3ewPmhvj0mM"}, 
     {name: "Alexa", img: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
@@ -143,6 +154,16 @@
   );
     
   </script>
-<!-- one change -->
+
+<!-- Bootstrap scritp -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- Bootstrap JQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Bootstrap cloudflare-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 </body>
 </html>
